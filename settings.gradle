@@ -1,0 +1,3 @@
+rootProject.name = 'rest-vs-grpc'
+include 'server'
+include 'client'
