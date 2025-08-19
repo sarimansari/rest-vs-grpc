@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.proto";
+option java_outer_classname = "TestServiceProto";
+
+package testservice;
+
+service TestService {
+  rpc GetLargePayload (LargePayloadRequest) returns (LargePayloadResponse);
+}
+
+message LargePayloadRequest {
+  int32 size = 1; // Size in KB
+}
+
+message LargePayloadResponse {
+  repeated LargeDataObject data = 1;
+}
+
+message LargeDataObject {
+  int64 id = 1;
+  string name = 2;
+  string description = 3;
+  repeated string tags = 4;
+  NestedObject nested = 5;
+}
+
+message NestedObject {
+  int32 level = 1;
+  string info = 2;
+}
+
+message LargeDataObjectList {
+  repeated LargeDataObject data = 1;
+}

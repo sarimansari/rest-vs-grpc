@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  codec:
+    max-in-memory-size: 1000MB
+  webflux:
+    max-in-memory-size: 1000MB
+grpc:
+  client:
+    testService:
+      address: 'static://localhost:9090'
+      negotiationType: PLAINTEXT

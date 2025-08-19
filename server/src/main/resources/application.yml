@@ -4,3 +4,4 @@ server:
 grpc:
   server:
     port: 9090
+    max-inbound-message-size: 1000000000 # 1 GB

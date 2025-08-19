@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 @GrpcService
 public class TestServiceGrpcImpl extends TestServiceGrpc.TestServiceImplBase {
 
-    // Make sure your gRPC client connects to the gRPC port (default: 9090), not the REST port (default: 8080).
-
     @Autowired
     private LargePayloadService largePayloadService;
 
